@@ -129,6 +129,7 @@ func (r *Stream) onClosed() {
 			break
 		}
 	}
+	r.AVRing.Done()
 	OnStreamClosedHooks.Trigger(r)
 }
 
